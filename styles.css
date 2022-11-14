@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 200pt;
+  overflow-x: hidden;
+  background-color: #ca74ff;
+  color: #1d1d1d;
+  font-family: serif;
+  animation-name: bg-color;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+img {
+  display: block;
+  margin-left: 600pt;
+  margin-top: 100pt;
+  width: 10%;
+}
+
+.animation1 {
+  font-size: 50pt;
+  background: rgba(0, 0, 0, 0.47);
+  color: rgb(4, 255, 0);
+  transform-origin: bottom left;
+  z-index: 1;
+  position: relative;
+  padding: 0.25em;
+  animation-name: weird;
+  animation-duration: 2.5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.animation2 {
+  transform: rotateY(0deg) rotate(360deg);
+  font-size: 50pt;
+  background: rgba(0, 0, 0, 0.47);
+  color: rgb(4, 255, 0);
+  transform-origin: top left;
+  z-index: 1;
+  position: relative;
+  padding: 0.25em;
+  animation-name: weird2;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.animation3 {
+  transform: rotateY(0deg) rotate(360deg);
+  font-size: 50pt;
+  background: rgba(0, 0, 0, 0.47);
+  color: rgb(4, 255, 0);
+  transform-origin: top left;
+  z-index: 1;
+  position: relative;
+  padding: 0.25em;
+  animation-name: weird3;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.fireworks {
+  transform-origin: center;
+  position: fixed;
+  animation-name: fireworks;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes weird {
+  0% {
+      transform: rotatez(90deg) rotatez(-180deg) rotateY(180deg) rotate(180deg);
+  }
+}
+
+@keyframes weird2 {
+  0% {
+      transform: rotatez(-90deg) rotate(180deg) translate(0,1000px)
+  }
+}
+
+@keyframes weird3 {
+  0% {
+      transform: translate(2500px,0)
+  }
+}
+
+@keyframes fireworks {
+  from {
+      transform: rotate(0deg) scale(1)
+  }
+
+  to {
+      transform: rotate(360deg) scale(3)
+  }
+}
+
+@keyframes bg-color {
+  from {
+      background-color: #340094;
+  }
+
+  to {
+      background-color: rgb(123, 196, 255);
+  }
+}
